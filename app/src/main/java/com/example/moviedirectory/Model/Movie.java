@@ -18,6 +18,10 @@ public class Movie implements Serializable {
     private String awards;
     private String tvRated;
     private String movieType;
+    public Movie()
+    {
+
+    }
 
     public String getImdbId() {
         return imdbId;
@@ -153,9 +157,6 @@ public class Movie implements Serializable {
 
 
 
-    public Movie()
-    {
 
-    }
 
 }
