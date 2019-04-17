@@ -1,4 +1,4 @@
 package com.example.moviedirectory.Data;
 
-public class MovieRecyclerViewAdapter  {
+public class MovieRecyclerViewAdapter {
 }
