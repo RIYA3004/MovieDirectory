@@ -12,6 +12,6 @@ public class Prefs {
         sharedPreferences.edit().putString("search",search).commit();//saves the user preferences
     }
     public String getSearch(){
-        return sharedPreferences.getString("search","SuperMan");
+        return sharedPreferences.getString("search","Batman");
     }
 }

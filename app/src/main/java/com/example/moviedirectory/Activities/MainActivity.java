@@ -79,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
                      for(int i=0;i<moviesArray.length();i++){
                          JSONObject movieObj=moviesArray.getJSONObject(i);
                          Movie movie=new Movie();
-                         movie.setTitle(movieObj.getString("Title"));
+                         movie.setTitle("Year Released: "+movieObj.getString("Title"));
                          movie.setYear(movieObj.getString("Year"));
-                         movie.setMovieType(movieObj.getString("Type"));
+                         movie.setMovieType("Type: "+movieObj.getString("Type"));
                          movie.setPoster(movieObj.getString("Poster"));
                          movie.setImdbId(movieObj.getString("imdbID"));
                          movieList.add(movie);
-                         Log.d("Movies:",movie.getTitle());
+                        // Log.d("Movies:",movie.getTitle());
 
                      }
                 }catch(JSONException e){
