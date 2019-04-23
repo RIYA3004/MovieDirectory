@@ -65,7 +65,7 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    
+
                  Toast.makeText(context,"Row Tapped!",Toast.LENGTH_LONG).show();
 
                 }
