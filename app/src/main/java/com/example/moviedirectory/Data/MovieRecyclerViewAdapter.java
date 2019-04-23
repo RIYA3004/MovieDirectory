@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.moviedirectory.Activities.MovieDetailActivity;
 import com.example.moviedirectory.Model.Movie;
 import com.example.moviedirectory.R;
 import com.squareup.picasso.Picasso;
@@ -56,7 +57,7 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
         ImageView poster;
         TextView year;
         TextView type;
-        public ViewHolder(View itemView,Context ctx) {
+        public ViewHolder(View itemView,final Context ctx) {
             super(itemView);
             context=ctx;
             title=(TextView) itemView.findViewById(R.id.movieTitleID);
@@ -69,8 +70,10 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
 
                 // Toast.makeText(context,"Row Tapped!",Toast.LENGTH_LONG).show();
                     Movie movie =movieList.get(getAdapterPosition());
-                    Intent intent=new Intent();
-                    
+                    Intent intent=new Intent(context, MovieDetailActivity.class);
+                    intent.putExtra("movie",movie);
+                    ctx.startActivity(intent);
+
 
                 }
             });
