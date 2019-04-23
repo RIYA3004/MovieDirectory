@@ -1,6 +1,7 @@
 package com.example.moviedirectory.Data;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -66,7 +67,10 @@ public class MovieRecyclerViewAdapter extends RecyclerView.Adapter<MovieRecycler
                 @Override
                 public void onClick(View v) {
 
-                 Toast.makeText(context,"Row Tapped!",Toast.LENGTH_LONG).show();
+                // Toast.makeText(context,"Row Tapped!",Toast.LENGTH_LONG).show();
+                    Movie movie =movieList.get(getAdapterPosition());
+                    Intent intent=new Intent();
+                    
 
                 }
             });
